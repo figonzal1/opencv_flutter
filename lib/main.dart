@@ -55,8 +55,8 @@ class _MyAppState extends State<MyApp> {
       var objectsCnt = detectObjects(rgb);
 
       //Dibujar lineas sobre aruco
-      polylines(rgb, convertCorners, true, Scalar(0, 255, 0, 150),
-          thickness: 5);
+      //polylines(rgb, convertCorners, true, Scalar(0, 255, 0, 150),
+      //    thickness: 5);
 
       //VecVecPoint to VecPoint (SIMPLIFIED)
       var simplifiedCorners = convertVecVecPointToVecPoint(convertCorners);
@@ -93,7 +93,7 @@ class _MyAppState extends State<MyApp> {
         var box = boxPoints(rect);
         print("box celular ${box}");
 
-        Point2f previousPoint = Point2f(0, 0);
+        Point2f previousPoint = box.first;
 
         for (Point2f point2f in box) {
           // Dibuja una línea desde el punto anterior hasta el punto actual
