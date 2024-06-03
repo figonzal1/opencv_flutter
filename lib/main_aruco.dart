@@ -1,8 +1,5 @@
 // ignore_for_file: avoid_print
 
-import 'dart:collection';
-import 'dart:ffi';
-import 'dart:isolate';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
@@ -47,7 +44,7 @@ class _MyAppState extends State<MyApp> {
     var grey = Mat.create();
     cvtColor(rgb, COLOR_RGBA2GRAY, dst: grey);
 
-    var (corners, ids, rejected) = aruco.detectMarkers(grey);
+    var (corners, ids, _) = aruco.detectMarkers(grey);
 
     if (corners.isNotEmpty) {
       //VecVecPoint2f to VecVecPoint
@@ -164,7 +161,7 @@ class _MyAppState extends State<MyApp> {
         dst: mask);
 
     //Find contours
-    var (contours, hierarchy) =
+    var (contours, _) =
         findContours(mask, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
 
     List<VecPoint> objectContours = [];
