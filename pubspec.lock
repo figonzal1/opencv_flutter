@@ -316,10 +316,10 @@ packages:
     dependency: "direct main"
     description:
       name: opencv_dart
-      sha256: "777551d809ec5566f3f8f1a8c63ed1686e1ad6e6f82654e6cd6dd43e9a7317f6"
+      sha256: "737be86493aa90fe9a9b85a24211ed811f175f2211ee336fff0913ab40524a39"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.4"
+    version: "1.0.5"
   path:
     dependency: transitive
     description:
