@@ -88,7 +88,7 @@ class _MyAppState extends State<MyApp> {
         var objectHeight = h / pixelCmRatio;
 
         var box = boxPoints(rect);
-        print("box celular ${box}");
+        print("box celular $box");
 
         Point2f previousPoint = box.first;
 
@@ -161,8 +161,7 @@ class _MyAppState extends State<MyApp> {
         dst: mask);
 
     //Find contours
-    var (contours, _) =
-        findContours(mask, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    var (contours, _) = findContours(mask, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
 
     List<VecPoint> objectContours = [];
     for (var cnt in contours) {
